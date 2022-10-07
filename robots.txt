@@ -1,1 +1,1 @@
-Sitemap: https://fastpages.fast.ai/sitemap.xml
+Sitemap: https://gaurav-adlakha.github.io/ws/sitemap.xml
