@@ -4,7 +4,10 @@ title: About Me
 permalink: /about/
 ---
 
-Gaurav is a Data scientist Youtuber and Blogger. **[Gaurav Adlakha](https://github.com/fastai/fastpages)** [^1].
+Hi! My name is Gaurav Adlakha. I am currently a Data Sciencet at PowerSchool. You can check out my CV
+
+Contact me
+If you are interested in the work I do or have questions about anything, email me at gauravadlakha1509@gmail.com
 
 
 
