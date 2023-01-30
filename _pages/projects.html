@@ -1,0 +1,37 @@
+---
+layout: default
+permalink: /projects/
+title: Projects
+search_exclude: true
+---
+
+<h2>Contents</h2>
+
+{% if site.projects.size > 0 %}
+
+  {% assign categories = "" | split:"" %}
+  {% for p in site.projects %}
+    {% assign categories = categories | push: p[0] %}
+  {% endfor %}
+  {% assign categories = categories | sort_natural %}
+
+  <ul>
+  {% for category in categories %}
+    <li><a href="#{{ category }}">{{ category }}</a></li>
+  {% endfor %}
+  </ul>
+
+  {% for category in categories %}
+      <h3 id ="{{ category }}"><i class="fas fa-folder-open category-folder-icon"></i></i> {{ category }}</h3>
+      <a name="{{ category | slugize }}"></a>
+      {% for project in site.projects[category] %}
+        {% if project.hide != true %}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <article class="project-item">
+          <p class="project-meta project-meta-title"><a class="page-meta" href="{{ site.baseurl }}{{ project.url }}">{{project.title}}</a>  • {{ project.date | date: date_format }}</p>
+        </article>
+        {% endif %}
+      {% endfor %}
+  {% endfor %}
+
+{% endif %}
